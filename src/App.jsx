@@ -440,7 +440,7 @@ function PlanEstudio({ token, nombre, onLogout }) {
                   textShadow: anioStyle.textShadow,
                   transition: "color 0.25s ease, text-shadow 0.25s ease",
                 }}>
-                  {String(anio).padStart(2, "0")}
+                  {anio === 1 ? "CBC" : String(anio - 1).padStart(2, "0")}
                 </div>
                 {anioEst === "completo" && (
                   <div style={{ fontSize: 9, color: "#a78bfa", letterSpacing: 1, marginTop: 4 }}>
