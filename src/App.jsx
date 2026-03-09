@@ -4,10 +4,11 @@ const API = "http://localhost:8080";
 
 // ─── Colores y constantes ────────────────────────────────────────────────────
 
-const ESTADO_CYCLE  = ["NONE", "REGULAR", "PROMOCIONADA"];
-const ESTADO_LABELS = { NONE: "Sin cursar", REGULAR: "Regular", PROMOCIONADA: "Promocionada" };
+const ESTADO_CYCLE  = ["NONE", "CURSANDO", "REGULAR", "PROMOCIONADA"];
+const ESTADO_LABELS = { NONE: "Sin cursar", CURSANDO: "Cursando", REGULAR: "Regular", PROMOCIONADA: "Promocionada" };
 const ESTADO_COLORS = {
   NONE:         { bg: "#13131f", border: "#252540", text: "#55557a", dot: "#252540", dotBright: "#3a3a60" },
+  CURSANDO:     { bg: "#1a1500", border: "#b45309", text: "#fbbf24", dot: "#b45309", dotBright: "#fcd34d" },
   REGULAR:      { bg: "#111a2a", border: "#2563eb", text: "#7eb8f7", dot: "#2563eb", dotBright: "#60a5fa" },
   PROMOCIONADA: { bg: "#1a0f2e", border: "#7c3aed", text: "#c4b5fd", dot: "#7c3aed", dotBright: "#a78bfa" },
 };
@@ -411,10 +412,11 @@ function PlanEstudio({ token, nombre, onLogout }) {
         <div style={{ marginLeft: "auto", display: "flex", gap: 18 }}>
           <LegendItem color="#3a3a60" label="Sin cursar" />
           <LegendItem color="#0d9488" label="Disponible" glow />
+	  <LegendItem color="#fbbf24" label="Cursando" />
           <LegendItem color="#2563eb" label="Regular" />
           <LegendItem color="#7c3aed" label="Promocionada" />
-          <LegendItem color="#16a34a" label="Previa (hover)" />
-          <LegendItem color="#ea580c" label="Desbloquea (hover)" />
+          <LegendItem color="#16a34a" label="Previa" />
+          <LegendItem color="#ea580c" label="Desbloquea" />
         </div>
       </div>
 
